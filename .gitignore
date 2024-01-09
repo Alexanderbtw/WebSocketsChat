@@ -363,7 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # dependencies
-/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
