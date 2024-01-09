@@ -372,6 +372,7 @@ FodyWeavers.xsd
 
 # next.js
 .next/
+.vscode/
 /out/
 
 # production
