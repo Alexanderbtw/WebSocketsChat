@@ -1,3 +1,4 @@
+using WebSocketsChat.Service.DataServices;
 using WebSocketsChat.Service.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,8 @@ builder.Services.AddCors(opt =>
             .AllowCredentials();
     });
 });
+
+builder.Services.AddSingleton<SharedInMemoDb>();
 
 var app = builder.Build();
 
