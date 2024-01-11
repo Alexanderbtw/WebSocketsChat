@@ -1,6 +1,4 @@
-﻿"use client";
-
-import { FunctionComponent, useState } from "react";
+﻿import { FunctionComponent, useState } from "react";
 
 interface Props {
   joinChatRoom: Function;
