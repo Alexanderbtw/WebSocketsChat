@@ -1,4 +1,4 @@
-﻿namespace WebSocketsChat.Service.Models
+﻿namespace WebSocketsChat.Application.Models
 {
     public class UserConnection
     {

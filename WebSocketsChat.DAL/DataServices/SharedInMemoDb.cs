@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
-using WebSocketsChat.Service.Models;
+using WebSocketsChat.Application.Models;
 
-namespace WebSocketsChat.Service.DataServices
+namespace WebSocketsChat.DAL.DataServices
 {
     public class SharedInMemoDb
     {

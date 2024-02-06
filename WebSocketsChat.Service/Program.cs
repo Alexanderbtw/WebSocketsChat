@@ -1,10 +1,21 @@
-using WebSocketsChat.Service.DataServices;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using WebSocketsChat.Application.Models;
+using WebSocketsChat.DAL.DataServices;
 using WebSocketsChat.Service.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSignalR();
-builder.Services.AddControllers();
+
+builder.Services.AddAuthentication().AddBearerToken(IdentityConstants.BearerScheme);
+builder.Services.AddAuthorizationBuilder();
+
+builder.Services.AddDbContext<ChatDbContext>(options => options.UseSqlite("DataSource=appdata.db"));
+
+builder.Services.AddIdentityCore<ChatUser>()
+    .AddEntityFrameworkStores<ChatDbContext>()
+    .AddApiEndpoints();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -24,7 +35,6 @@ builder.Services.AddSingleton<SharedInMemoDb>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -33,8 +43,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("reactApp");
+
 app.MapHub<ChatHub>("/Chat");
 
-app.UseCors("reactApp");
+app.MapIdentityApi<ChatUser>();
 
 app.Run();

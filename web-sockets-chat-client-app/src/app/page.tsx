@@ -51,11 +51,12 @@ export default function Home() {
       <header>
         <h1 className='font-semibold text-3xl'>ChatApp</h1>
       </header>
-      <main className='flex flex-col justify-between flex-grow'>
+      <main className='flex flex-col justify-between flex-grow container'>
         {!conn
           ? <WaitingRoom joinChatRoom={joinChatRoom}/>
           : <ChatRoom messages={messages} sendMessage={sendMessage}/>
         }
+        {/* <ChatRoom messages={messages} sendMessage={sendMessage}/> */}
       </main>
       <footer></footer>
     </div>

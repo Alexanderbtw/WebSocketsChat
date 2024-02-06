@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketsChat.Service", "WebSocketsChat.Service\WebSocketsChat.Service.csproj", "{3E7EE0D1-FF02-4C2F-879E-42E66C25C4CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketsChat.Service", "WebSocketsChat.Service\WebSocketsChat.Service.csproj", "{3E7EE0D1-FF02-4C2F-879E-42E66C25C4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketsChat.Application", "WebSocketsChat.Application\WebSocketsChat.Application.csproj", "{C7A94790-051F-4657-A3D1-16D051DE3411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketsChat.DAL", "WebSocketsChat.DAL\WebSocketsChat.DAL.csproj", "{98F3539C-161A-4CB4-9C40-FDECA07C42DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3E7EE0D1-FF02-4C2F-879E-42E66C25C4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7EE0D1-FF02-4C2F-879E-42E66C25C4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7EE0D1-FF02-4C2F-879E-42E66C25C4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A94790-051F-4657-A3D1-16D051DE3411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A94790-051F-4657-A3D1-16D051DE3411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A94790-051F-4657-A3D1-16D051DE3411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A94790-051F-4657-A3D1-16D051DE3411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F3539C-161A-4CB4-9C40-FDECA07C42DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F3539C-161A-4CB4-9C40-FDECA07C42DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F3539C-161A-4CB4-9C40-FDECA07C42DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F3539C-161A-4CB4-9C40-FDECA07C42DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

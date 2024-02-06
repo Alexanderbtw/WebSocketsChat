@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using WebSocketsChat.Service.DataServices;
-using WebSocketsChat.Service.Models;
+using WebSocketsChat.Application.Models;
+using WebSocketsChat.DAL.DataServices;
 
 namespace WebSocketsChat.Service.Hubs
 {

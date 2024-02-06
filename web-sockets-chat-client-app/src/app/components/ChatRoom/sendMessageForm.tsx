@@ -1,4 +1,6 @@
-﻿import { FunctionComponent, useState } from "react";
+﻿import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FunctionComponent, useState } from "react";
 
 interface Props {
   sendMessage: Function;
@@ -35,9 +37,7 @@ export const SendMessageForm: FunctionComponent<Props> = ({ sendMessage }) => {
           disabled={!msg}
           className="text-white absolute end-2.5 bottom-2.5 bg-indigo-600 hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-1.5 disabled:bg-indigo-800"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-          </svg>
+          <FontAwesomeIcon icon={faPaperPlane} />
         </button>
       </div>
     </form>
